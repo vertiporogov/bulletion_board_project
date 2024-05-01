@@ -1,5 +1,6 @@
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView
 from rest_framework.permissions import IsAuthenticated, AllowAny
+from django_filters.rest_framework import DjangoFilterBackend, OrderingFilter
 
 from bulletion_board.models import Ad, Feedback
 from bulletion_board.paginations import AdPagination
@@ -23,6 +24,8 @@ class AdsListAPIView(ListAPIView):
     queryset = Ad.objects.all()
     pagination_class = AdPagination
     permission_classes = [AllowAny]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ('title',)
 
 
 class AdsRetrieveAPIView(RetrieveAPIView):
