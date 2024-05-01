@@ -51,7 +51,7 @@ class AdTestCase(APITestCase):
         )
 
     def test_create_ad(self):
-        """ Тест создания привычек """
+        """ Тест создания объявления """
 
         self.client.force_authenticate(user=self.user)
 
@@ -89,7 +89,8 @@ class AdTestCase(APITestCase):
         )
 
     def test_update_ad(self):
-        """Тестирование изменения информации о привычке"""
+        """Тестирование изменения информации об объявлении"""
+
         self.client.force_authenticate(user=self.user)
         ad = Ad.objects.create(
             title='Test_ad',
@@ -112,7 +113,7 @@ class AdTestCase(APITestCase):
         )
 
     def test_delete_ad(self):
-        """Тестирование удаления привычки"""
+        """Тестирование удаления объявления"""
 
         self.client.force_authenticate(user=self.user)
 
@@ -133,7 +134,7 @@ class AdTestCase(APITestCase):
         )
 
     def test_get_list_feedback(self):
-        """ Тест для получения списка объявлений """
+        """ Тест для получения списка комментариев """
 
         self.client.force_authenticate(user=self.user1)
 
@@ -147,7 +148,7 @@ class AdTestCase(APITestCase):
         )
 
     def test_create_feedback(self):
-        """ Тест создания привычек """
+        """ Тест создания комментария """
 
         self.client.force_authenticate(user=self.user1)
 
@@ -184,7 +185,7 @@ class AdTestCase(APITestCase):
         )
 
     def test_update_feedback(self):
-        """Тестирование изменения информации о привычке"""
+        """Тестирование изменения информации о комментарии"""
         self.client.force_authenticate(user=self.user1)
         feedback = Feedback.objects.create(
             text='Test_feed',
@@ -205,7 +206,7 @@ class AdTestCase(APITestCase):
         )
 
     def test_delete_feedback(self):
-        """Тестирование удаления привычки"""
+        """Тестирование удаления комментария"""
 
         self.client.force_authenticate(user=self.user1)
 
