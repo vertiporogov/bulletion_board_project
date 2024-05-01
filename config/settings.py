@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'users',
+    'bulletion_board',
 
     'rest_framework',
     'drf_yasg',
