@@ -14,9 +14,9 @@ urlpatterns = [
     path('update/<int:pk>/', AdsUpdateAPIView.as_view(), name='update_ad'),
     path('delete/<int:pk>/', AdsDestroyAPIView.as_view(), name='delete_ad'),
 
-    path('create/feetback/', FeedbackCreateAPIView.as_view(), name='create_feedback'),
-    path('list/feetback/', FeedbackListAPIView.as_view(), name='list_feedback'),
-    path('detail/feetback/<int:pk>/', FeedbackRetrieveAPIView.as_view(), name='detail_feedback'),
-    path('update/feetback/<int:pk>/', FeedbackUpdateAPIView.as_view(), name='update_feedback'),
-    path('delete/feetback/<int:pk>/', FeedbackDestroyAPIView.as_view(), name='delete_feedback'),
+    path('create/feedback/', FeedbackCreateAPIView.as_view(), name='create_feedback'),
+    path('list/feedback/', FeedbackListAPIView.as_view(), name='list_feedback'),
+    path('detail/feedback/<int:pk>/', FeedbackRetrieveAPIView.as_view(), name='detail_feedback'),
+    path('update/feedback/<int:pk>/', FeedbackUpdateAPIView.as_view(), name='update_feedback'),
+    path('delete/feedback/<int:pk>/', FeedbackDestroyAPIView.as_view(), name='delete_feedback'),
 ]
