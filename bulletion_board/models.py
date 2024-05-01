@@ -27,7 +27,7 @@ class Feedback(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='дата и время создания отзыва')
 
     def __str__(self):
-        return f'{self.author} прокоментировал {self.ad.title}'
+        return f'{self.owner} прокоментировал {self.ad.title}'
 
     class Meta:
         verbose_name = 'отзыв'
