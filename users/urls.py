@@ -15,7 +15,7 @@ urlpatterns = [
     path('', UserListAPIView.as_view(), name='user-list'),
     path('update/<int:pk>/', UserUpdateAPIView.as_view(), name='update_user'),
     path('detail/<int:pk>/', UserRetrieveAPIView.as_view(), name='detail_user'),
-    path('delete/', UserDeleteAPIView.as_view(), name='user-delete'),
+    path('delete/<int:pk>/', UserDeleteAPIView.as_view(), name='user-delete'),
 
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
