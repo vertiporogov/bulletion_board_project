@@ -64,6 +64,9 @@ class FeedbackCreateAPIView(CreateAPIView):
     serializer_class = FeedbackSerializer
     permission_classes = [IsAuthenticated]
 
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
 
 class FeedbackListAPIView(ListAPIView):
     """
